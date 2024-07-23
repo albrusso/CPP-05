@@ -6,7 +6,7 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 13:12:32 by albrusso          #+#    #+#             */
-/*   Updated: 2024/07/22 14:12:33 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/07/23 18:54:17 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,6 @@ AForm *Intern::makeForm(std::string s1, std::string s2)
 		return new PresidentialPardonForm(s2);
 	default:
 		std::cout << "Intern try to create " << s1 << ", but doesn't exist" << std::endl;
-		return nullptr;
+		return NULL;
 	}
 }
