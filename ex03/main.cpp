@@ -6,7 +6,7 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 15:19:33 by albrusso          #+#    #+#             */
-/*   Updated: 2024/07/24 14:03:14 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/07/24 14:29:15 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,23 @@
 
 int main(void)
 {
-    Intern intern;
-    Bureaucrat p("Pippo", 1);
-    AForm* form;
+	Intern intern;
+	Bureaucrat p("Pippo", 1);
+	AForm* form;
 
-    form = intern.makeForm("ShrubberyCreationForm", "home");
-    form->beSigned(p);
-    p.executeForm(*form);
-    delete form;
-    form = intern.makeForm("RobotomyRequestForm", "robot");
-    form->beSigned(p);
-    p.executeForm(*form);
-    delete form;
-    form = intern.makeForm("PresidentialPardonForm", "president");
-    form->beSigned(p);
-    p.executeForm(*form);
-    delete form;
-    form = intern.makeForm("UnknownForm", "unknown");
-    form->beSigned(p);
-    p.executeForm(*form);
-    delete form;
-    return 0;
+	form = intern.makeForm("ShrubberyCreationForm", "home");
+	form->beSigned(p);
+	p.executeForm(*form);
+	delete form;
+	form = intern.makeForm("RobotomyRequestForm", "robot");
+	form->beSigned(p);
+	p.executeForm(*form);
+	delete form;
+	form = intern.makeForm("PresidentialPardonForm", "president");
+	form->beSigned(p);
+	p.executeForm(*form);
+	delete form;
+	form = intern.makeForm("UnknownForm", "unknown");
+	delete form;
+	return 0;
 }
