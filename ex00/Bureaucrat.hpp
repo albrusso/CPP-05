@@ -6,7 +6,7 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 15:38:19 by albrusso          #+#    #+#             */
-/*   Updated: 2024/07/22 12:57:19 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:46:45 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Bureaucrat
 		Bureaucrat(void);
 		Bureaucrat(const std::string &name, int grade);
 		Bureaucrat(const Bureaucrat& copy);
-		Bureaucrat const &operator=(const Bureaucrat& other);
+		Bureaucrat const &operator=(const Bureaucrat &b);
 		~Bureaucrat(void);
 
 		class GradeTooHighException : public std::exception

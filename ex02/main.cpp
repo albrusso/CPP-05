@@ -6,75 +6,76 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 15:19:33 by albrusso          #+#    #+#             */
-/*   Updated: 2024/07/20 13:04:32 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:59:14 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 #include "AForm.hpp"
 
 int main(void)
 {
-	/* Create the 3 forms and some Bureaucrats */
-
 	ShrubberyCreationForm shrubbery("Home");
-	Bureaucrat mike("Mike", 150);
-	Bureaucrat jon("Jon", 120);
-	Bureaucrat steve("Steve", 3);
-	
-	/* Try to execute forms without being signed */
+	RobotomyRequestForm robotomy("Smart Contract");
+	PresidentialPardonForm presidential("act1");
+	Bureaucrat a("Aldo", 150);
+	Bureaucrat d("Duccio", 120);
+	Bureaucrat p("Pippo", 3);
 	{
 		try
 		{
-			std::cout << mike << std::endl;
+			std::cout << a << std::endl;
+			std::cout << d << std::endl;
+			std::cout << p << std::endl;
 			std::cout << shrubbery << std::endl;
-			mike.executeForm(shrubbery);
+			a.executeForm(shrubbery);
+			a.executeForm(robotomy);
+			a.executeForm(presidential);
+			d.executeForm(shrubbery);
+			d.executeForm(robotomy);
+			d.executeForm(presidential);
+			p.executeForm(shrubbery);
+			p.executeForm(robotomy);
+			p.executeForm(presidential);
 		}
 		catch (std::exception &e)
 		{
 			std::cout << e.what() << std::endl;
 		}
 	}
-
-	std::cout << "\n --------------------- \n\n";
-	
-	/* Sign form and try to execute without enough grade */
 	{
 		try
 		{
-			std::cout << mike << std::endl;
-			std::cout << jon << std::endl;
+			shrubbery.beSigned(p);
+			robotomy.beSigned(p);
+			presidential.beSigned(p);
 			std::cout << shrubbery << std::endl;
-			shrubbery.beSigned(jon);
-			mike.executeForm(shrubbery);
+			std::cout << robotomy << std::endl;
+			std::cout << presidential << std::endl;
+			a.executeForm(shrubbery);
+			a.executeForm(robotomy);
+			a.executeForm(presidential);
 		}
 		catch (std::exception &e)
 		{
 			std::cout << e.what() << std::endl;
 		}
 	}
-
-	std::cout << "\n --------------------- \n\n";
-	
-	/* Sign forms and execute them */
 	{
 		try
 		{
-			std::cout << shrubbery << std::endl;
-			
-			std::cout << "\n --------------------- \n\n";
-			steve.executeForm(shrubbery);
-			std::cout << "\n --------------------- \n\n";
+			p.executeForm(shrubbery);
+			p.executeForm(robotomy);
+			p.executeForm(presidential);
+
 		}
 		catch (std::exception &e)
 		{
 			std::cout << e.what() << std::endl;
 		}
 	}
-	
-	std::cout << "\n --------------------- \n\n";
-
-
 	return (0);
 }

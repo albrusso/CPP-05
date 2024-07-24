@@ -6,18 +6,18 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 17:51:26 by albrusso          #+#    #+#             */
-/*   Updated: 2024/07/21 10:53:23 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/07/24 14:06:08 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(void) : AForm::AForm("ShrubberyCreationForm", 147, 137), _target("Blank")
+ShrubberyCreationForm::ShrubberyCreationForm(void) : AForm::AForm("ShrubberyCreationForm", 145, 137), _target("Blank")
 {
 	std::cout << "Default ShrubberyCreationForm costructor called" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) :  AForm::AForm("ShrubberyCreationForm", 147, 137), _target(target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) :  AForm::AForm("ShrubberyCreationForm", 145, 137), _target(target)
 {
 	std::cout << "ShrubberyCreationForm costructor called" << std::endl;
 }

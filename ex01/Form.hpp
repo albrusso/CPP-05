@@ -6,7 +6,7 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 16:20:38 by albrusso          #+#    #+#             */
-/*   Updated: 2024/07/22 13:00:49 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:49:02 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,6 @@ class Form
 		bool getSigned(void) const;
 
 		void beSigned(Bureaucrat &b);
-
-		friend std::ostream	&operator<<(std::ostream &os, const Form &f);
 };
 
 std::ostream& operator<<(std::ostream& os, const Form &f);

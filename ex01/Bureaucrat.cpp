@@ -6,7 +6,7 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 15:50:43 by albrusso          #+#    #+#             */
-/*   Updated: 2024/07/22 12:59:46 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:48:08 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat& copy)
 	*this = copy;
 }
 
-Bureaucrat const &Bureaucrat::operator=(const Bureaucrat& b)
+Bureaucrat const &Bureaucrat::operator=(const Bureaucrat &b)
 {
 	this->_grade = b._grade;
 	return *this;

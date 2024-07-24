@@ -6,7 +6,7 @@
 /*   By: albrusso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 15:50:43 by albrusso          #+#    #+#             */
-/*   Updated: 2024/07/22 12:57:26 by albrusso         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:47:03 by albrusso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name)
 	std::cout << "Bureaucrat costructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& copy)
+Bureaucrat::Bureaucrat(const Bureaucrat &copy)
 {
 	*this = copy;
 }
 
-Bureaucrat const &Bureaucrat::operator=(const Bureaucrat& other)
+Bureaucrat const &Bureaucrat::operator=(const Bureaucrat &b)
 {
-	this->_grade = other._grade;
+	this->_grade = b._grade;
 	return *this;
 }
 

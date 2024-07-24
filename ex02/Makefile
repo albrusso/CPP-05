@@ -6,7 +6,7 @@
 #    By: albrusso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/15 15:36:43 by albrusso          #+#    #+#              #
-#    Updated: 2024/07/20 13:07:10 by albrusso         ###   ########.fr        #
+#    Updated: 2024/07/24 13:51:35 by albrusso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,9 @@ DEFAULT	=	\033[0m
 SRC		=	main.cpp \
 			Bureaucrat.cpp \
 			AForm.cpp \
-			ShrubberyCreationForm.cpp
+			ShrubberyCreationForm.cpp \
+			RobotomyRequestForm.cpp \
+			PresidentialPardonForm.cpp
 
 OBJ		=	$(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
